@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Header from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 
 const Layout = ({ children }) => (
   <>
-    <Header />
+    <Navbar />
     <main>{children}</main>
     <Footer />
   </>
