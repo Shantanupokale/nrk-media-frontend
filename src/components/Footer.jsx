@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
@@ -34,9 +33,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#F7FCFE] border-t border-border flex justify-center">
-      <div className="w-[75vw] px-8 py-12">
-        {/* Grid Layout */}
+    <footer className="bg-[#F7FCFE] border-t border-border flex justify-center flex-col">
+      {/* Top CTA Section */}
+      <div className="w-full flex flex-col items-center py-12 border-b border-[#E2E8F0]">
+        <h2 className="text-5xl font-semibold text-[#1E293B] text-center mb-16">
+          Have a Query....?
+        </h2>
+        <Button className="bg-[#FF5C33] text-white text-lg px-10 py-8 rounded-2xl hover:bg-[#e14e28] transition">
+          Get In Touch
+        </Button>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="w-[75vw] px-8 py-12 mx-auto">
         <div className="grid grid-cols-12 gap-12 items-start">
           {/* Company Links */}
           <div className="col-span-3">
