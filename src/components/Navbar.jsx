@@ -17,14 +17,12 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-16">
+    <div className="fixed top-0 left-0 right-0 z-50  bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto w-[75vw] bg-green-700">
+        <nav className="flex items-center justify-between  h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Camera className="w-6 h-6 text-primary-foreground" />
-            </div>
+          <Link to="/" className="flex items-center gap-2  group">
+           <img src="src\assets\NRK.svg" alt="" srcset="" className="w-12 h-12" />
             <span className="text-xl font-bold text-foreground">NRK</span>
           </Link>
 
