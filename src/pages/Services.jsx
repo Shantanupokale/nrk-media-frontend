@@ -172,20 +172,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Have a Query<span className="text-primary">...?</span>
-          </h2>
-          <Link to="/contact">
-            <Button variant="gradient" size="lg">
-              Get In Touch
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
-        </div>
-      </section>
+   
     </div>
   );
 };
