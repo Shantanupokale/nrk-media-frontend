@@ -4,14 +4,8 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
-      {/* Animated Circles */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F7FCFE] ">
+    
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -84,22 +78,14 @@ const HeroSection = () => {
                 <rect x="8" y="-5" width="8" height="5" fill="none" stroke="hsl(var(--primary))" strokeWidth="1"/>
               </g>
 
-              {/* Decorative Elements */}
-              <circle cx="50" cy="50" r="3" fill="hsl(var(--primary))" opacity="0.5" className="animate-pulse"/>
-              <circle cx="450" cy="80" r="3" fill="hsl(var(--primary))" opacity="0.5" className="animate-pulse delay-500"/>
-              <circle cx="80" cy="350" r="3" fill="hsl(var(--primary))" opacity="0.5" className="animate-pulse delay-1000"/>
-              <circle cx="420" cy="320" r="3" fill="hsl(var(--primary))" opacity="0.5" className="animate-pulse delay-1500"/>
+             
             </svg>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
-        </div>
-      </div>
+
     </section>
   );
 };
