@@ -1,134 +1,96 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
-import { Target, Eye, Users, Award, ArrowRight } from "lucide-react";
+import humans from "src/assets/services_page_icons/humans.svg";
+import imag1 from "src/assets/aboutus/img1.svg"; // (bottom-left upward arrow)
+import imag2 from "src/assets/aboutus/img3.svg"; // (top-right coins + telescope)
 
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Our Mission",
-      description: "To provide exceptional visual storytelling that helps brands connect with their audience and achieve their goals through creative excellence.",
-    },
-    {
-      icon: Eye,
-      title: "Our Vision",
-      description: "To be the leading creative agency that transforms ideas into compelling visual narratives, setting new standards in digital creativity.",
-    },
-    {
-      icon: Users,
-      title: "Our Team",
-      description: "A diverse group of talented photographers, designers, and creative strategists passionate about delivering outstanding results.",
-    },
-    {
-      icon: Award,
-      title: "Our Values",
-      description: "Innovation, integrity, and excellence drive everything we do, ensuring we deliver beyond expectations for every client.",
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-background pt-20">
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-hero">
-        <div className="container mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            About <span className="text-primary">Us</span>
+    <div className="min-h-screen bg-[#F7FCFE] pt-20">
+      {/* HERO */}
+      <section className="py-8 px-4 border-b">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A]">
+            About <span className="text-[#FF5A36]">Us</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 text-base md:text-lg italic text-[#475569]">
             We Live And Breathe Digital. The Internet Is Our Home.
           </p>
-        </div>
-      </section>
 
-      {/* Story Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Our <span className="text-primary">Story</span>
-              </h2>
-              <p className="text-muted-foreground">
-                We are a buzzing digital media agency based out of New Delhi, India. Our team consists of experienced and 
-                hardworking social bees who thrive on creativity and innovation. With over 15 years of combined experience, 
-                we've helped hundreds of brands tell their stories through compelling visual content.
-              </p>
-              <p className="text-muted-foreground">
-                Our journey began with a simple belief: that great visual content has the power to transform businesses. 
-                Today, we work with clients across industries, from startups to Fortune 500 companies, helping them create 
-                memorable experiences that resonate with their audiences.
-              </p>
-              <Link to="/work">
-                <Button variant="default" size="lg">
-                  View Our Work
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-            </div>
-
-            {/* Illustration */}
-            <div className="relative">
-              <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center">
-                <svg viewBox="0 0 400 400" className="w-full h-full p-8">
-                  <g transform="translate(200, 200)">
-                    {/* Team illustration */}
-                    <circle cx="-60" cy="0" r="40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                    <circle cx="60" cy="0" r="40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                    <circle cx="0" cy="-60" r="40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                    
-                    {/* Connecting lines */}
-                    <line x1="-20" y1="-30" x2="20" y2="-30" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
-                    <line x1="-40" y1="20" x2="40" y2="20" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
-                    <line x1="-30" y1="-20" x2="-30" y2="20" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
-                    <line x1="30" y1="-20" x2="30" y2="20" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.5"/>
-                    
-                    {/* Center element */}
-                    <circle cx="0" cy="0" r="15" fill="hsl(var(--primary))" opacity="0.2"/>
-                    <circle cx="0" cy="0" r="8" fill="hsl(var(--primary))"/>
-                  </g>
-                </svg>
-              </div>
-            </div>
+          {/* large illustration */}
+          <div className="mt-6 flex justify-center">
+            <img
+              src={humans}
+              alt="Humans illustration"
+              className="w-full max-w-4xl -mt-10 md:-mt-16 "
+            />
           </div>
-        </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-4 bg-muted/50">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-card rounded-xl p-8 border border-border hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <value.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Let's work together to create something amazing
+          {/* intro paragraph block */}
+          <p className="mt-8 max-w-4xl mx-auto text-[15px] leading-7 text-[#334155]">
+            We are a buzzing digital media agency based out of New Delhi, India.
+            Our team consists of experienced and hardworking social bees who
+            breathe and live digital. Change on Facebook, Twitter, YouTube,
+            Instagram, Google algorithm? Rest assured that we are aware of it
+            the moment it’s out. We combine our years of experience in creating
+            integrated social solutions with creative output to generate a rich
+            digital experience for our clients. We think, we research, we
+            create, and for our clients, we thrive to deliver best solutions to
+            their every problem.
           </p>
-          <Link to="/contact">
-            <Button variant="gradient" size="lg">
-              Get In Touch
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
+        </div>
+      </section>
+
+      {/* VISION + MISSION GRID */}
+      <section className="">
+        <div className="container mx-auto">
+          {/* row 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            {/* Vision – text block (top-left) */}
+            <div className="p-20 border border-black">
+              <h2 className="text-6xl px-12 font-semibold text-[#FF5A36]">Our Vision</h2>
+              <p className="mt-2 text-lg px-12 italic text-[#0F172A]">
+                Insights, Metrics And Analytics - Everything Is Connected!
+              </p>
+              <p className="mt-4 text-lg px-12 leading-7 text-[#334155]">
+                In a digital world where everything’s connected, we believe that
+                the approach to digital communications has to be joined-up too.
+                Our approach combines creativity & technology and blends a
+                diverse range of digital marketing disciplines — from mobile and
+                responsive web design to search and social media campaigns — all
+                under one roof.
+              </p>
+            </div>
+
+            {/* Vision – image block (top-right) */}
+            <div className=" w-full flex items-center justify-center p-0">
+              <img src={imag2} alt="Vision illustration" className="w-full m-0 p-0 border border-black" />
+            </div>
+          </div>
+
+          {/* row 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            {/* Mission – image block (bottom-left) */}
+            <div className=" w-full flex items-center justify-center p-0">
+              <img src={imag1} alt="Mission illustration" className="w-full m-0 p-0 border border-black" />
+            </div>
+
+            {/* Mission – text block (bottom-right) */}
+            <div className="p-20 border border-black">
+              <h2 className="text-6xl px-12 font-semibold text-[#FF5A36]">Our Mission</h2>
+              <p className="mt-2 text-lg px-12 italic text-[#0F172A]">
+                Our Approach Is Backed By Strategy, Creativity And Optimized For Results.
+              </p>
+              <p className="mt-4 text-lg px-12 leading-7 text-[#334155]">
+                We understand that each client and each project we undertake is
+                different and so we have developed a repeatable process that we
+                know works. Our methodology puts the user at the heart of the
+                experience from the start. By working iteratively through a
+                pre-defined set of stages, we create beautiful and usable
+                solutions that work hard and deliver targeted results.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
