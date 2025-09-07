@@ -38,8 +38,8 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="space-y-2">
+      <div className="grid grid-cols-1  gap-2">
+        <div className="space-y-2 ">
           <Label htmlFor="name">Your Name</Label>
           <Input
             id="name"
@@ -48,7 +48,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="bg-background"
+            className="bg-[#F4F1F1]"
           />
         </div>
         
@@ -62,7 +62,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="bg-background"
+            className="bg-[#F4F1F1]"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@ const ContactForm = () => {
           placeholder="+1 (555) 123-4567"
           value={formData.phone}
           onChange={handleInputChange}
-          className="bg-background"
+          className="bg-[#F4F1F1]"
         />
       </div>
 
@@ -89,7 +89,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
-          className="bg-background min-h-[150px]"
+          className="bg-[#F4F1F1] min-h-[150px]"
         />
       </div>
 

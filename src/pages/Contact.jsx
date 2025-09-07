@@ -1,95 +1,143 @@
-import ContactForm from "@/components/ContactForm";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import MapEmbed from "@/components/MapEmbed";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      content: "hello@nrkmedia.com",
-      link: "mailto:hello@nrkmedia.com"
-    },
-    {
-      icon: MapPin,
-      title: "Address",
-      content: "123 Creative Street, New York, NY 10001",
-      link: "#"
-    },
-    {
-      icon: Clock,
-      title: "Working Hours",
-      content: "Mon - Fri: 9:00 AM - 6:00 PM",
-      link: "#"
-    }
-  ];
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    // Replace this with your own backend API call
+    setTimeout(() => {
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setIsLoading(false);
+    }, 1500);
+  };
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-[#F7FCFE] pt-10">
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-hero">
-        <div className="container mx-auto text-center space-y-6">
+      <section className="py-10 pt-16 px-4 bg-gradient-hero border-b-2">
+        <div className="container mx-auto text-center space-y-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
             Get In <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're Here To Help. Reach Out To Us With Any Questions Or Inquiries, And We'll Get Back To You Promptly.
+          <p className="text-lg text-muted-foreground max-w-4xl italic mx-auto">
+            We're Here To Help. Reach Out To Us With Any Questions Or Inquiries,
+            And We'll Get Back To You Promptly.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-card rounded-xl p-8 border border-border">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
-              <ContactForm />
-            </div>
+      <section className="pt-10 px-4 flex justify-center">
+        <div className="container w-[60vw] mx-auto flex justify-center">
+          <div className="rounded-xl px-8 w-full max-w-3xl">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 gap-2">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Your Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-[#F4F1F1]"
+                  />
+                </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
-                <p className="text-muted-foreground mb-8">
-                  We'd love to hear from you. Whether you have a question about our services, 
-                  pricing, or anything else, our team is ready to answer all your questions.
-                </p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {contactInfo.map((info, index) => (
-                    <a
-                      key={index}
-                      href={info.link}
-                      className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                    >
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                        <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                        <p className="text-sm text-muted-foreground">{info.content}</p>
-                      </div>
-                    </a>
-                  ))}
+                <div className="space-y-2">
+                  <Label htmlFor="email">Your Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-[#F4F1F1]"
+                  />
                 </div>
               </div>
-            </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone">Your Mobile No.</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 9951234XXX"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="bg-[#F4F1F1]"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project..."
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  className="bg-[#F4F1F1] min-h-[150px]"
+                />
+              </div>
+
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-32 rounded-xl bg-[#1e293b] text-white hover:bg-[#334155] px-5 py-6"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>Get In Touch</>
+                  )}
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
-      <section className="py-20 px-4 bg-muted/50">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Find Us Here</h2>
+      <section className="py-20 px-4 bg-[#F7FCFE]">
+        <div className="container w-[60vw] mx-auto">
+          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
+            Find Us Here
+          </h2>
           <MapEmbed />
         </div>
       </section>
