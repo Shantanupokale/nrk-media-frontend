@@ -36,7 +36,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#F7FCFE] border-t border-border flex justify-center flex-col">
+    <footer className="bg-[#F7FCFE] border-t border-border flex justify-center flex-col z-50">
       {/* Top CTA Section */}
       {!isContactPage && (
       <div className="w-full flex flex-col items-center py-12 border-b border-[#E2E8F0]">
