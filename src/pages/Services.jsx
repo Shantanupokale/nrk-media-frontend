@@ -1,180 +1,149 @@
-import ServiceCard from "@/components/ServiceCard";
+
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
-import { 
-  Camera, 
-  Video, 
-  Image, 
-  Palette, 
-  Globe, 
-  Smartphone,
-  TrendingUp,
-  Mail,
-  Users,
-  Megaphone,
-  PenTool,
-  Monitor,
-  ArrowRight 
-} from "lucide-react";
+import { Monitor } from "lucide-react";
+// Custom SVGs (as image paths)
+import content from "src/assets/services_page_icons/icons/content.svg";
+import earth from "src/assets/services_page_icons/icons/Icon.svg";
+import virtualTourIcon from "src/assets/services_page_icons/icons/layout 1.svg";
+import emailIcon from "src/assets/services_page_icons/icons/mail 2.svg";
+import social from "src/assets/services_page_icons/icons/Group.svg";
+import seo from "src/assets/services_page_icons/icons/seo.svg";
 
 const Services = () => {
   const services = [
     {
-      icon: TrendingUp,
+      icon: seo,
+      isComponent: false,
       title: "Search Engine Optimization",
-      description: "Boost your online visibility with our expert SEO strategies, making your brand stand out in search results.",
-      features: [
-        "Keyword research and analysis",
-        "On-page and off-page optimization",
-        "Technical SEO audits",
-        "Local SEO strategies"
-      ]
+      description:
+        "Boost your online visibility with our expert SEO strategies, making your brand stand out in search results.",
     },
     {
-      icon: Megaphone,
+      icon: social,
+      isComponent: false,
       title: "Social Media Management",
-      description: "Drive engagement and brand loyalty through our dynamic social media campaigns designed to captivate your audience.",
-      features: [
-        "Content strategy development",
-        "Multi-platform management",
-        "Community engagement",
-        "Analytics and reporting"
-      ]
+      description:
+        "Drive engagement and brand loyalty through our dynamic social media campaigns designed to captivate your audience.",
     },
     {
-      icon: PenTool,
+      icon: content,
+      isComponent: false,
       title: "Content Marketing",
-      description: "Elevate your content game with our captivating and SEO-friendly content designed to attract, educate, and convert.",
-      features: [
-        "Blog writing and management",
-        "Video content creation",
-        "Infographic design",
-        "Content distribution strategy"
-      ]
+      description:
+        "Elevate your content game with our captivating and SEO-friendly content designed to attract, educate, and convert.",
     },
     {
-      icon: Video,
+      icon: earth,
+      isComponent: false,
       title: "360° Virtual Tour",
-      description: "Showcase properties, products, or spaces with engaging 360° virtual tours that captivate viewers, build trust, and drive conversions.",
-      features: [
-        "High-resolution 360° photography",
-        "Interactive hotspots",
-        "Custom branding integration",
-        "VR-compatible experiences"
-      ]
+      description:
+        "Showcase properties, products, or spaces with engaging 360° virtual tours that captivate viewers, build trust, and drive conversions.",
     },
     {
-      icon: Mail,
+      icon: emailIcon,
+      isComponent: false,
       title: "Email Marketing",
-      description: "Nurture your leads and build lasting relationships through effective email marketing campaigns that drive conversions.",
-      features: [
-        "Campaign strategy and design",
-        "Automated email sequences",
-        "A/B testing and optimization",
-        "Performance tracking"
-      ]
+      description:
+        "Nurture your leads and build lasting relationships through effective email marketing campaigns that drive conversions.",
     },
     {
-      icon: Monitor,
+      icon: virtualTourIcon,
+      isComponent: false,
       title: "Web Development",
-      description: "Transform your website into a user-friendly powerhouse with our creative design and development expertise.",
-      features: [
-        "Responsive web design",
-        "E-commerce solutions",
-        "CMS development",
-        "Performance optimization"
-      ]
-    }
+      description:
+        "Transform your website into a user-friendly powerhouse with our creative design and development expertise.",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-[#F7FCFE] pt-12 relative ">
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-hero">
-        <div className="container mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Our <span className="text-primary">Services</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Browse Our Services To Grow Your Brand Creatively And Efficiently
-          </p>
+      <section className="py-14 px-4 border-b-2">
+      <div className="container mx-auto text-center space-y-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+        Our Services
+        </h1>
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto italic">
+        Browse Our Services To Grow Your Brand Creatively And Efficiently
+        </p>
+        {/* Humans SVG illustration */}
+        <div className="flex justify-center">
+        <img
+          src="src/assets/services_page_icons/humans.svg"
+          alt="Humans illustration"
+          className="max-w-4xl -mt-24 z-0"
+        />
         </div>
-      </section>
-
-      {/* Illustration Section */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <div className="flex justify-center">
-            <svg viewBox="0 0 600 300" className="w-full max-w-2xl h-auto">
-              {/* Left character with laptop */}
-              <g transform="translate(150, 150)">
-                <circle cx="0" cy="-40" r="30" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <path d="M-30,-40 L-30,-10 Q-30,20 0,20 Q30,20 30,-10 L30,-40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <rect x="-35" y="5" width="50" height="30" rx="3" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <circle cx="-8" cy="-40" r="2" fill="hsl(var(--primary))"/>
-                <circle cx="8" cy="-40" r="2" fill="hsl(var(--primary))"/>
-              </g>
-
-              {/* Center character with VR */}
-              <g transform="translate(300, 150)">
-                <circle cx="0" cy="-40" r="35" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <rect x="-25" y="-50" width="50" height="12" rx="5" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <text x="0" y="-42" textAnchor="middle" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold">VR</text>
-                <path d="M-35,-40 L-35,-10 Q-35,30 0,30 Q35,30 35,-10 L35,-40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <path d="M-35,0 L-50,20 M35,0 L50,20" stroke="hsl(var(--primary))" strokeWidth="2"/>
-              </g>
-
-              {/* Right character with camera */}
-              <g transform="translate(450, 150)">
-                <circle cx="0" cy="-40" r="30" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <path d="M-30,-40 L-30,-10 Q-30,20 0,20 Q30,20 30,-10 L30,-40" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <rect x="-20" y="-5" width="30" height="20" rx="3" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <circle cx="-5" cy="5" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <circle cx="-5" cy="5" r="5" fill="none" stroke="hsl(var(--primary))" strokeWidth="1"/>
-              </g>
-
-              {/* Connecting elements */}
-              <circle cx="100" cy="100" r="2" fill="hsl(var(--primary))" opacity="0.5"/>
-              <circle cx="500" cy="100" r="2" fill="hsl(var(--primary))" opacity="0.5"/>
-              <circle cx="300" cy="50" r="2" fill="hsl(var(--primary))" opacity="0.5"/>
-            </svg>
-          </div>
-        </div>
+      </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
+      <div className="container mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, idx) => {
+          const isLastRow = idx >= services.length - 3;
+          const isLastCol = (idx + 1) % 3 === 0;
+
+          return (
+          <div
+            key={idx}
+            className={`
+            flex flex-col items-center text-center space-y-3 px-6 py-10
+            border-gray-200
+            ${!isLastCol ? "border-r" : ""}
+            ${!isLastRow ? "border-b" : ""}
+            `}
+          >
+            {service.isComponent ? (
+            <service.icon className="w-10 h-10 text-gray-700" />
+            ) : (
+            <img
+              src={service.icon}
+              alt={service.title}
+              className="w-10 h-10"
+            />
+            )}
+            <h3 className="text-lg font-semibold text-gray-900">
+            {service.title}
+            </h3>
+            <p className="text-gray-600 text-sm px-6 leading-relaxed">
+            {service.description}
+            </p>
           </div>
+          );
+        })}
         </div>
+      </div>
       </section>
 
-      {/* VR Special Section */}
-      <section className="py-20 px-4 bg-gradient-dark text-primary-foreground">
-        <div className="container mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Bring Your Spaces To Life With Virtual Reality
-          </h2>
-          <p className="text-lg opacity-90 max-w-3xl mx-auto">
-            Showcase Properties, Products, Or Destinations With Our Interactive VR Tours That Captivate, 
-            Engage, And Convert Like Never Before.
-          </p>
-          <Link to="/contact">
-            <Button variant="outline" size="lg" className="bg-primary-foreground text-secondary hover:bg-primary-foreground/90">
-              Take A Virtual Tour Now
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
-        </div>
+      {/* VR Section */}
+      <section className="pb-12 px-4 text-center relative">
+      <div className="container max-w-4xl px-8 py-2 mx-auto space-y-6 relative z-10">
+        <h2 className="text-5xl font-semibold text-red-500 leading-tight">
+        <span>Bring Your Spaces To Life With</span>
+        <br />
+        <span>Virtual Reality</span>
+        </h2>
+        <p className="text-gray-600 mx-auto text-lg italic py-8">
+        Showcase Properties, Products, Or Destinations With Our Immersive VR
+        Tours That Captivate, Engage, And Convert Like Never Before.
+        </p>
+        <Button size="lg" className="mt-4 py-6 font-thin text-lg bg-[#19223F]">
+        Take A Virtual Tour Now
+        </Button>
+      </div>
       </section>
 
-   
+      {/* Overlay VR image hidden over footer */}
+      <img
+      src="/src/assets/services_page_icons/vr-guy.svg"
+      alt="VR Background"
+      className="absolute left-1/2 bottom-0 -translate-x-1/2 z-0 max-w-4xl opacity-0 md:opacity-100 pointer-events-none"
+      style={{ pointerEvents: "none" }}
+      />
     </div>
-  );
+    );
 };
 
 export default Services;
