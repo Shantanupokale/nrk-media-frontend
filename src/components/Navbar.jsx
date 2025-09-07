@@ -14,9 +14,9 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-background  font-nunito">
       {/* Full-width bar */}
-      <nav className="w-full h-16 border bg-green-200 flex justify-center">
+      <nav className="w-full h-16 shadow flex justify-center">
         {/* Centered inner navbar */}
         <div className="flex items-center justify-between w-[60vw]">
           {/* Logo */}
@@ -35,9 +35,7 @@ const Navbar = () => {
                 key={link.href}
                 to={link.href}
                 className={`text-base font-medium transition-colors hover:text-primary ${
-                  isActive(link.href)
-                    ? "text-primary"
-                    : "text-foreground"
+                  isActive(link.href) ? "text-primary" : "text-foreground"
                 }`}
               >
                 {link.label}
