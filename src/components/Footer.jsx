@@ -40,10 +40,10 @@ const Footer = () => {
       {/* Top CTA Section */}
       {!isContactPage && (
       <div className="w-full flex flex-col items-center py-12 border-b border-[#E2E8F0]">
-        <h2 className="text-5xl font-semibold text-[#1E293B] text-center mb-16">
+        <h2 className="text-5xl font-comfortaa font-thin text-[#1E293B] text-center mb-16">
           Have a Query....?
         </h2>
-        <Button className="bg-[#FF5C33] text-white text-lg px-8 py-8 rounded-2xl hover:bg-[#e14e28] transition">
+        <Button className="bg-[#FF5C33] text-white font-nunito  text-xl px-10 py-8 rounded-2xl hover:bg-[#e14e28] transition">
           Get In Touch
         </Button>
         </div>
@@ -51,7 +51,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="w-[75vw] px-8 py-12 mx-auto">
-        <div className="grid grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-12 gap-12 items-start ">
           {/* Company Links */}
           <div className="col-span-3">
             <h3 className="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider mb-4">
@@ -62,7 +62,7 @@ const Footer = () => {
                 <li key={link.href} className="py-1">
                   <Link
                     to={link.href}
-                    className="text-base text-black hover:text-[#FF5C33] transition-colors"
+                    className="text-base  text-black hover:text-[#FF5C33] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -104,12 +104,12 @@ const Footer = () => {
                 placeholder="Enter your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white border border-[#E2E8F0] rounded-2xl h-16 px-4 w-full"
+                className="bg-white border font-normal border-[#E2E8F0] rounded-2xl h-16 px-4 w-full"
                 required
               />
               <Button
                 type="submit"
-                className="h-16 rounded-2xl bg-[#FF5C33] text-white text-xl font-thin hover:bg-[#e14e28] w-full"
+                className="h-16 font-nunito rounded-2xl bg-[#FF5C33] text-white text-xl font-thin hover:bg-[#e14e28] w-full"
               >
                 Subscribe Now
               </Button>

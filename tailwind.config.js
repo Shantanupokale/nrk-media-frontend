@@ -15,7 +15,10 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
 		  },
 			 fontFamily: {
-        nunito: ["Nunito", "sans-serif"], // add this
+				 nunito: ["Nunito", "sans-serif"], 
+				 comfortaa: ["Comfortaa", "cursive"],
+				 montserrat: ["Montserrat", "sans-serif"], 
+					 georgia: ["Georgia", "serif"],
       },
   		colors: {
   			background: 'hsl(var(--background))',

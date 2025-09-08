@@ -10,10 +10,10 @@ const About = () => {
       {/* HERO */}
       <section className="py-8 px-4 border-b">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A]">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight font-montserrat text-[#0F172A]">
             About <span className="text-[#FF5A36]">Us</span>
           </h1>
-          <p className="mt-3 text-base md:text-lg italic text-[#475569]">
+          <p className="mt-3 text-md italic font-georgia text-[#000000]">
             We Live And Breathe Digital. The Internet Is Our Home.
           </p>
 
@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           {/* intro paragraph block */}
-          <p className="mt-8 max-w-4xl mx-auto text-[15px] leading-7 text-[#334155]">
+          <p className="mt-8 max-w-4xl  mx-auto text-md leading-7 font-montserrat font-extralight text-[#000000]">
             We are a buzzing digital media agency based out of New Delhi, India.
             Our team consists of experienced and hardworking social bees who
             breathe and live digital. Change on Facebook, Twitter, YouTube,
@@ -49,10 +49,10 @@ const About = () => {
             {/* Vision – text block (top-left) */}
             <div className="p-20 border border-black">
               <h2 className="text-6xl px-12 font-semibold text-[#FF5A36]">Our Vision</h2>
-              <p className="mt-2 text-lg px-12 italic text-[#0F172A]">
+              <p className="mt-2 text-lg px-12 italic text-[#0F172A] font-georgia">
                 Insights, Metrics And Analytics - Everything Is Connected!
               </p>
-              <p className="mt-4 text-lg px-12 leading-7 text-[#334155]">
+              <p className="mt-4 text-lg px-12 leading-7 font-montserrat  text-[#334155]">
                 In a digital world where everything’s connected, we believe that
                 the approach to digital communications has to be joined-up too.
                 Our approach combines creativity & technology and blends a
@@ -78,10 +78,10 @@ const About = () => {
             {/* Mission – text block (bottom-right) */}
             <div className="p-20 border border-black">
               <h2 className="text-6xl px-12 font-semibold text-[#FF5A36]">Our Mission</h2>
-              <p className="mt-2 text-lg px-12 italic text-[#0F172A]">
+              <p className="mt-2 text-lg px-12 italic text-[#0F172A] font-georgia" >
                 Our Approach Is Backed By Strategy, Creativity And Optimized For Results.
               </p>
-              <p className="mt-4 text-lg px-12 leading-7 text-[#334155]">
+              <p className="mt-4 text-lg px-12 leading-7 text-[#334155] font-montserrat ">
                 We understand that each client and each project we undertake is
                 different and so we have developed a repeatable process that we
                 know works. Our methodology puts the user at the heart of the
