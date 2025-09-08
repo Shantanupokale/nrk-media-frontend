@@ -42,10 +42,10 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-10 pt-16 px-4 bg-gradient-hero border-b-2">
         <div className="container mx-auto text-center space-y-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-montserrat text-[#FF5C33] ">
             Get In <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-4xl italic mx-auto">
+          <p className="text-lg font-georgia max-w-4xl italic mx-auto">
             We're Here To Help. Reach Out To Us With Any Questions Or Inquiries,
             And We'll Get Back To You Promptly.
           </p>
@@ -57,8 +57,8 @@ const Contact = () => {
         <div className="container w-[60vw] mx-auto flex justify-center">
           <div className="rounded-xl px-8 w-full max-w-3xl">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 gap-2">
-                <div className="space-y-2">
+              <div className="grid grid-cols-1 gap-2 ">
+                <div className="space-y-2 font-poppins font-thin ">
                   <Label htmlFor="name">Your Name</Label>
                   <Input
                     id="name"
@@ -71,7 +71,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 font-poppins font-thin">
                   <Label htmlFor="email">Your Email</Label>
                   <Input
                     id="email"
@@ -86,7 +86,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 font-poppins font-thin">
                 <Label htmlFor="phone">Your Mobile No.</Label>
                 <Input
                   id="phone"
@@ -99,7 +99,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 font-poppins font-thin">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
@@ -116,7 +116,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-32 rounded-xl bg-[#1e293b] text-white hover:bg-[#334155] px-5 py-6"
+                  className="w-32 rounded-xl font-nunito bg-[#1e293b] text-white hover:bg-[#334155] px-5 py-6"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -135,7 +135,7 @@ const Contact = () => {
       </section>
       <section className="py-20 px-4 bg-[#F7FCFE]">
         <div className="container w-[60vw] mx-auto">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
+          <h2 className="text-2xl font-bold font-jakarta text-foreground mb-8 text-center">
             Find Us Here
           </h2>
           <MapEmbed />

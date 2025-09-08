@@ -60,10 +60,10 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-14 px-4 border-b-2">
       <div className="container mx-auto text-center space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <h1 className="text-4xl md:text-5xl font-bold font-montserrat text-gray-900">
         Our Services
         </h1>
-        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto italic">
+        <p className="font-georgia text-lg max-w-2xl mx-auto italic">
         Browse Our Services To Grow Your Brand Creatively And Efficiently
         </p>
         {/* Humans SVG illustration */}
@@ -90,7 +90,7 @@ const Services = () => {
             key={idx}
             className={`
             flex flex-col items-center text-center space-y-3 px-6 py-10
-            border-gray-200
+            border-gray-300
             ${!isLastCol ? "border-r" : ""}
             ${!isLastRow ? "border-b" : ""}
             `}
@@ -104,10 +104,10 @@ const Services = () => {
               className="w-10 h-10"
             />
             )}
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-jakarta font-semibold ">
             {service.title}
             </h3>
-            <p className="text-gray-600 text-sm px-6 leading-relaxed">
+            <p className="text-gray-600 font-jakarta text-sm font-normal px-6 leading-relaxed">
             {service.description}
             </p>
           </div>
@@ -119,17 +119,17 @@ const Services = () => {
 
       {/* VR Section */}
       <section className="pb-12 px-4 text-center relative">
-      <div className="container max-w-4xl px-8 py-2 mx-auto space-y-6 relative z-10">
-        <h2 className="text-5xl font-semibold text-red-500 leading-tight">
+      <div className="container  px-8 py-2 mx-auto space-y-6 relative z-10">
+        <h2 className="text-5xl font-montserrat font-semibold text-[#FF5C33] leading-tight">
         <span>Bring Your Spaces To Life With</span>
         <br />
         <span>Virtual Reality</span>
         </h2>
-        <p className="text-gray-600 mx-auto text-lg italic py-8">
+        <p className=" mx-auto text-lg italic font-georgia py-8 max-w-4xl">
         Showcase Properties, Products, Or Destinations With Our Immersive VR
         Tours That Captivate, Engage, And Convert Like Never Before.
         </p>
-        <Button size="lg" className="mt-4 py-6 font-thin text-lg bg-[#19223F]">
+        <Button size="lg" className="mt-4 py-6 font-nunito font-thin text-lg bg-[#19223F]">
         Take A Virtual Tour Now
         </Button>
       </div>

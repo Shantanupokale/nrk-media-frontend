@@ -18,7 +18,9 @@ export default {
 				 nunito: ["Nunito", "sans-serif"], 
 				 comfortaa: ["Comfortaa", "cursive"],
 				 montserrat: ["Montserrat", "sans-serif"], 
-					 georgia: ["Georgia", "serif"],
+				 georgia: ["Georgia", "serif"],
+				 jakarta: ["'Plus Jakarta Sans'", "sans-serif"],
+				 poppins: ["Poppins", "sans-serif"],
       },
   		colors: {
   			background: 'hsl(var(--background))',

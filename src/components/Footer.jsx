@@ -59,10 +59,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
-                <li key={link.href} className="py-1">
+                <li key={link.href} className="py-1 font-medium">
                   <Link
                     to={link.href}
-                    className="text-base  text-black hover:text-[#FF5C33] transition-colors"
+                    className="  text-black/75 hover:text-[#FF5C33] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -78,10 +78,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {helpLinks.map((link) => (
-                <li key={link.href} className="py-1">
+                <li key={link.href} className="py-1 font-medium">
                   <Link
                     to={link.href}
-                    className="text-base text-black hover:text-[#FF5C33] transition-colors "
+                    className=" text-black/75 hover:text-[#FF5C33] transition-colors "
                   >
                     {link.label}
                   </Link>

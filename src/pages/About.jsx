@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           {/* intro paragraph block */}
-          <p className="mt-8 max-w-4xl  mx-auto text-md leading-7 font-montserrat font-extralight text-[#000000]">
+          <p className="mt-8 max-w-5xl  mx-auto text-lg leading-7 font-montserrat font-extralight text-[#000000]">
             We are a buzzing digital media agency based out of New Delhi, India.
             Our team consists of experienced and hardworking social bees who
             breathe and live digital. Change on Facebook, Twitter, YouTube,

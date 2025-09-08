@@ -5,12 +5,12 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-background pt-20">
       {/* Hero Section */}
-      <section className="py-6 pt-16 px-4 bg-[#F7FCFE] border-b border-gray-200">
+      <section className="py-6 pt-16 px-4 bg-[#F7FCFE] border-b border-black">
         <div className="container mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Our <span className="text-primary">WORK</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-[#FF5C33]">
+            Our <span className="text-[#19223F]">WORK</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto italic">
+          <p className="text-lg font-georgia max-w-2xl mx-auto italic">
             Dive Into Cinematic World Of NRK Media
           </p>
         </div>
@@ -20,7 +20,7 @@ const Work = () => {
       <section className="container mx-auto px-4 py-10 bg-[#F7FCFE]">
         <div className="flex flex-col items-center">
           {/* Project Title */}
-          <h2 className="text-xl font-semibold text-foreground text-center">
+          <h2 className="text-3xl font-semibold font-nunito text-foreground text-center">
             D. Y. Patil College Of Engineering
           </h2>
 
