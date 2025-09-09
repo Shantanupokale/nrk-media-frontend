@@ -94,7 +94,7 @@ const Hero = () => {
       {/* Virtual Tour + Strategy */}
       <section className="bg-white">
 <div className="container mx-auto">
-  <img src={heroimage} alt="" className="w-screen" />
+  <img src={heroimg} alt="" className="w-screen" />
 </div>
 
 </section>
