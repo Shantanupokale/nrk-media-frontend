@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router";
+import nrk from "src/assets/nrk.svg"
 
 const Navbar = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="/src/assets/NRK.svg"
+              src={nrk}
               alt="NRK Logo"
               className="w-16 h-16"
             />

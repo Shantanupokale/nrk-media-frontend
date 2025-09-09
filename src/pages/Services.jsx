@@ -8,6 +8,8 @@ import virtualTourIcon from "src/assets/services_page_icons/icons/layout 1.svg";
 import emailIcon from "src/assets/services_page_icons/icons/mail 2.svg";
 import social from "src/assets/services_page_icons/icons/Group.svg";
 import seo from "src/assets/services_page_icons/icons/seo.svg";
+import humans from "@/assets/services_page_icons/humans.svg";
+import vrGuy from "@/assets/services_page_icons/vr-guy.svg";
 
 const Services = () => {
   const services = [
@@ -69,7 +71,7 @@ const Services = () => {
         {/* Humans SVG illustration */}
         <div className="flex justify-center">
         <img
-          src="src/assets/services_page_icons/humans.svg"
+          src={humans}
           alt="Humans illustration"
           className="max-w-4xl -mt-24 z-0"
         />
@@ -137,7 +139,7 @@ const Services = () => {
 
       {/* Overlay VR image hidden over footer */}
       <img
-      src="/src/assets/services_page_icons/vr-guy.svg"
+      src={vrGuy}
       alt="VR Background"
       className="absolute left-1/2 bottom-0 -translate-x-1/2 z-0 max-w-4xl opacity-0 md:opacity-100 pointer-events-none"
       style={{ pointerEvents: "none" }}
