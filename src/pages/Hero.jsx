@@ -1,5 +1,6 @@
-import frame from "@/assets/hero/frame.svg";
+
 import humans from "@/assets/hero/humans.svg";
+import heroimg from "@/assets/hero/heroimg.svg";
 import vector1 from "@/assets/hero/vector1.svg";
 import { Button } from "@/components/ui/button";
 import Testimonials from "./testimonial";
@@ -93,7 +94,7 @@ const Hero = () => {
       {/* Virtual Tour + Strategy */}
       <section className="bg-white">
 <div className="container mx-auto">
-  <img src={frame} alt="" className="w-screen" />
+  <img src={heroimage} alt="" className="w-screen" />
 </div>
 
 </section>
