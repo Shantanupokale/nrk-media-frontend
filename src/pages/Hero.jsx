@@ -1,4 +1,4 @@
-
+import { Link } from "react-router";
 import humans from "@/assets/hero/humans.svg";
 import heroimg from "@/assets/hero/heroimg.svg";
 import vector1 from "@/assets/hero/vector1.svg";
@@ -19,26 +19,30 @@ const Hero = () => {
     </h1>
 
     {/* Row: Vector + Buttons + Humans */}
-    <div className="flex flex-row items-center justify-between gap-8 relative z-10">
+    <div className="flex flex-row items-center justify-between relative z-10">
       
       {/* Left side: vector + buttons */}
       <div className="flex flex-col lg:flex-row items-center gap-6">
-        <img src={vector1} alt="Vector" className="w-36" />
+        <img src={vector1} alt="Vector" className="w-40" />
 
-        <div className="flex gap-4 -mt-16">
-          <Button className="bg-[#212B39] text-white px-8 py-6 rounded-lg font-nunito font-semibold">
+              <div className="flex gap-4 -mt-16">
+                 <Link to="/contact" className="hidden md:block">
+          <Button className="bg-[#1e293b] text-white hover:bg-[#334155] px-8 py-7 text-md rounded-lg font-nunito font-semibold ">
             Get In Touch
-          </Button>
+                  </Button>
+                </Link>
+                 <Link to="/services" className="hidden md:block">
           <Button
             variant="outline"
-            className="border-[#212B39] text-[#212B39] px-8 py-6 rounded-lg font-nunito font-semibold"
+            className="border-[#212B39] text-[#212B39] px-8 py-7 text-md rounded-lg font-nunito font-semibold"
           >
             Our Services
-          </Button>
+                  </Button>
+                  </Link>
         </div>
       </div>
       <div className="">
-        <img src={humans} alt="Hero" className="max-w-4xl -mt-24 z-0 pr-16" />
+        <img src={humans} alt="Hero" className="max-w-4xl -mt-32 z-0 pr-16" />
       </div>
     </div>
   </div>

@@ -3,16 +3,15 @@ import dyplogo from "@/assets/dyplogo.svg"; // ✅ make sure file is in src/asse
 const Work = () => {
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-[#F7FCFE] pt-20">
       {/* Hero Section */}
-      <section className="py-6 pt-16 px-4 bg-[#F7FCFE] border-b border-black">
+      <section className="py-8 px-4 bg-[#F7FCFE] border-b border-black">
         <div className="container mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-[#FF5C33]">
+           <h1 className="text-4xl md:text-5xl font-bold tracking-tight font-montserrat text-[#FF5C33]">
             Our <span className="text-[#19223F]">WORK</span>
           </h1>
-          <p className="text-lg font-georgia max-w-2xl mx-auto italic">
-            Dive Into Cinematic World Of NRK Media
-          </p>
+          <p className="mt-3 text-md italic font-georgia text-[#000000]">
+Dive Into Cinematic World Of NRK Media          </p>
         </div>
       </section>
 

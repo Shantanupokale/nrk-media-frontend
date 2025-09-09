@@ -42,7 +42,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-10 pt-16 px-4 bg-gradient-hero border-b-2">
         <div className="container mx-auto text-center space-y-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-montserrat text-[#FF5C33] ">
+          <h1 className="text-5xl font-bold font-montserrat text-[#FF5C33] ">
             Get In <span className="text-primary">Touch</span>
           </h1>
           <p className="text-lg font-georgia max-w-4xl italic mx-auto">

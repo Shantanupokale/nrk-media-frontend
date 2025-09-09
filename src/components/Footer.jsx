@@ -42,10 +42,12 @@ const Footer = () => {
       <div className="w-full flex flex-col items-center py-12 border-b border-[#E2E8F0]">
         <h2 className="text-5xl font-comfortaa font-thin text-[#1E293B] text-center mb-16">
           Have a Query....?
-        </h2>
+          </h2>
+           <Link to="/contact" className="hidden md:block">
         <Button className="bg-[#FF5C33] text-white font-nunito  text-xl px-10 py-8 rounded-2xl hover:bg-[#e14e28] transition">
           Get In Touch
-        </Button>
+            </Button>
+            </Link>
         </div>
         )}
 

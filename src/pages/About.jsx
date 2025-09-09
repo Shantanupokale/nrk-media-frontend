@@ -1,8 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
-import humans from "src/assets/services_page_icons/humans.svg";
 import imag1 from "src/assets/aboutus/img1.svg"; // (bottom-left upward arrow)
 import imag2 from "src/assets/aboutus/img3.svg"; // (top-right coins + telescope)
+import humans from "src/assets/services_page_icons/humans.svg";
 
 const About = () => {
   return (
