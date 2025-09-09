@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router";
-import nrk from "src/assets/nrk.svg"
+import nrk from "@/assets/nrk.svg"
 
 const Navbar = () => {
   const location = useLocation();
