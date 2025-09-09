@@ -1,10 +1,7 @@
-import { Button } from "@/components/ui/button";
-import humans from "@/assets/hero/humans.svg";
-import img1 from "@/assets/hero/img1.svg";
-import img2 from "@/assets/hero/img2.svg";
-import pic from "@/assets/hero/pic.svg";
-import vector1 from "@/assets/hero/vector1.svg";
 import frame from "@/assets/hero/frame.svg";
+import humans from "@/assets/hero/humans.svg";
+import vector1 from "@/assets/hero/vector1.svg";
+import { Button } from "@/components/ui/button";
 import Testimonials from "./testimonial";
 
 const Hero = () => {
