@@ -122,7 +122,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-10 pt-6 border-t border-[#E2E8F0] text-center">
           <p className="text-sm font-medium text-[#2a2a2a]">
-            © Copyright {new Date().getFullYear()}, All Rights Reserved by NRK
+            © Copyright {new Date().getFullYear()}, All Rights Reserved by Reddy's Art
             Media
           </p>
         </div>
